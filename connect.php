@@ -2,7 +2,7 @@
     $host = "localhost";
     $user = "root";
     $pass = "";
-    $db = "cashier-system"; //database name eg. CashierSystem
+    $db = "cashier_system"; //database name eg. CashierSystem
 
     //create a connection to the databse 
     $conn = new mysqli($host,$user, $pass, $db);
