@@ -11,9 +11,5 @@
     if($conn->connect_error){
         echo "Failed to connect to database" .$conn -> connect_error;
     }
-    else{
-        echo "Successfully connecterd to database";
-    }
-
     //hello
 ?>
