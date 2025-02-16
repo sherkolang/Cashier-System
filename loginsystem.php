@@ -30,37 +30,37 @@
                 </div>
             </div>
 
-            <!--sign up form -->
+                    <!--sign up form -->
             <div class="form-box2" id="signUp">
                 <h1 class="form-title" >Register</h1>
-                <form methdod= "post" action="signup.php">
-                  <div class="input-group">
-                      <input type="text" name="fName" id="fName" placeholder="First Name" required>
-                      <label for="fname">First Name</label>
-                  </div>
-                  <div class="input-group">
-                      <input type="text" name="lName" id="lName" placeholder="Last Name" required>
-                      <label for="lname">Last Name</label>
-                  </div>
-                  <div class="input-group">
-                      <input type="email" name="email" id="email" placeholder="Email" required>
-                      <label for="email">Email</label>
-                  </div>
-                  <div class="input-group">
-                      <input type="password" name="password" id="password" placeholder="Password" required>
-                      <label for="password">Password</label>
-                  </div>
-                  <div class="input-group">
-                        <select id="roleDropdown" name="role" placeholder="Role" vonchange="showSelectedRole()" required>
-                            <option value=""></option>
+                <form method="post" action="signup.php">
+                <div class="input-group">
+                    <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="input-group">
+                        <select id="roleDropdown" name="role" required>
+                            <option value="">Select Role</option>
                             <option value="admin">Admin</option>
                             <option value="cashier">Cashier</option>
                         </select>
-                        <label for="role">Select role</label>
-                    </div>
+                        <label for="role">Select Role</label>
+                </div>
 
-                  <input type="submit" class="btn" value="Sign Up" name="signup">
-                  
+                <input type="submit" class="btn" value="Sign Up" name="signup">
+                
                 </form>
                 <div class="links">
                     <p>Already have an account?</p>
