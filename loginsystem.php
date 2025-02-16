@@ -50,14 +50,17 @@
                       <input type="password" name="password" id="password" placeholder="Password" required>
                       <label for="password">Password</label>
                   </div>
-                  <h2>Select Your Role:</h2> 
-                    <select id="roleDropdown" onchange="showSelectedRole()">
-                        <option value="">--Select Role--</option>
-                        <option value="admin">Admin</option>
-                        <option value="cashier">Cashier</option>
-                    </select>
-                    
+                  <div class="input-group">
+                        <select id="roleDropdown" name="role" placeholder="Role" vonchange="showSelectedRole()" required>
+                            <option value=""></option>
+                            <option value="admin">Admin</option>
+                            <option value="cashier">Cashier</option>
+                        </select>
+                        <label for="role">Select role</label>
+                    </div>
+
                   <input type="submit" class="btn" value="Sign Up" name="signup">
+                  
                 </form>
                 <div class="links">
                     <p>Already have an account?</p>
@@ -76,6 +79,7 @@
             document.getElementById('container').classList.toggle('active');
             document.getElementById('cover').textContent = document.getElementById('container').classList.contains('active') ? '' : '';
         }
+
     </script>
 </body>
 </html>
