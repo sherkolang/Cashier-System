@@ -1,5 +1,2 @@
-<?php
-
-include 'conenct.php';
 
 
