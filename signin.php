@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['role'] = $user['role'];
 
         if ($user['role'] == 'admin') {
-            header("Location: ../admin_dashboard.html");    
+            echo "you have logged in"; 
         } else {
             header("Location: ../cashier_dashboard.html");
         }

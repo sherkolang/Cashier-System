@@ -13,7 +13,7 @@
         <div class="slider">
             <div class="form-box1" id="signIn">
                 <h1 class="form-title" >Sign In</h1>
-                <form>
+                <form method="post" action="signin.php">
                     <div class="input-group">
                         <input type="email" name="email" id="email" placeholder="Email" required>
                         <label for="email">Email</label>
@@ -22,7 +22,7 @@
                         <input type="password" name="password" id="password" placeholder="Password" required>
                         <label for="password">Password</label>
                     </div>
-                    <input type="submit" class="btn" value="Sign In">
+                    <input type="submit" class="btn" value="Sign In" name="signin">
                 </form>
                 <div class="links">
                     <p>Don't have an account?</p>
