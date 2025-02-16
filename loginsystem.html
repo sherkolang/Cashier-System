@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--sign in form -->
     <div class="container" id="container">
         <div class="slider">
             <div class="form-box1" id="signIn">
@@ -28,9 +29,11 @@
                     <button onclick="toggleForm()">Sign Up</button>
                 </div>
             </div>
+
+            <!--sign up form -->
             <div class="form-box2" id="signUp">
                 <h1 class="form-title" >Register</h1>
-                <form methdod= "post" action="">
+                <form methdod= "post" action="signup.php">
                   <div class="input-group">
                       <input type="text" name="fName" id="fName" placeholder="First Name" required>
                       <label for="fname">First Name</label>
@@ -57,7 +60,10 @@
         </div>
         <div class="cover" id="cover" onclick="toggleForm()"></div>
     </div>
-    
+
+
+    <!--js logic in transition-->
+
     <script>
         function toggleForm() {
             document.getElementById('container').classList.toggle('active');
