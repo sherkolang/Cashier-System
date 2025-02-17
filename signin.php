@@ -1,33 +1,32 @@
 <?php
+include 'connect.php';
 
-session_start();
-include("connect.php");
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST['signin'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $password = md5($password);
 
-    $sql = "SELECT * FROM users WHERE email = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute(); 
-    $result = $stmt->get_result();
-    $user = $result->fetch_assoc();
+    // Checking if the user exists in the database
+    $check = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    $result = $conn->query($check);
 
-    if ($user && password_verify($password, $user['password'])){
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['email'] = $user['email'];
-        $_SESSION['role'] = $user['role'];
+    if ($result->num_rows > 0) {
+        session_start();
+        $row = $result->fetch_assoc();
+        $_SESSION['email'] = $row['email'];
+        $_SESSION['role'] = $row['role']; // Save the user role in the session
 
-        if ($user['role'] == 'admin') {
-            echo "you have logged in"; 
-        } else {
-            header("Location: ../cashier_dashboard.html");
-        }
-        exit() ;
+            // Redirect based on role
+            if ($row['role'] == 'admin') {
+                header('location: admindashboard.php');
+            } elseif ($row['role'] == 'cashier') {
+                header('location: cashierdashboard.php');
+            } else {
+                echo "Invalid user role!";
+            }
+        exit();
     } else {
-        echo "<script>alert('Invalid email or password!'); window.location.href='../Sign-In-&-Sign-Up-UI.html';</script>";
+        echo "User does not exist, Wrong Email or Password!";
     }
 }
 ?>
-
