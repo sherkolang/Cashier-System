@@ -13,10 +13,51 @@
     <div class="header">
       loogo
     </div>
+
     <div class="pos">
-      <div>left</div>
-      <div>right</div>
+      <div class="left">
+        <div class="product-scan">
+          <div class="product-name">
+            <div class="name">
+              La Leche
+            </div>
+            <div class="barcode">
+              01250917
+            </div>
+          </div>
+
+          <div class="product-numbers">
+            <div class="quantity">
+                <button class="qty-btn" onclick="decreaseQuantity()">-</button>
+                <span id="quantity-value">1</span>
+                <button class="qty-btn" onclick="increaseQuantity()">+</button>
+            </div>
+            <button class="delete">Delete</button>
+            <div class="price">$4.50</div>
+        </div>
+        
+        </div>
+        <div class="product-table">
+          <table>
+            <tr class="table-title">
+              <td>Name</td>
+              <td>Quantity</td>
+              <td>Price</td>
+              <td>Total</td>
+            </tr>
+            <tr>
+              <td> La Leche</td>
+              <td> 2</td>
+              <td> $4.50</td>
+              <td> $9.00</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      
+      <div class="right">right</div>
     </div>
+
   </div>
   
 </body>

@@ -36,3 +36,138 @@ body {
   align-items: center;
   padding-left: 20px;
 }
+
+.pos {
+  display: flex;
+  width: 100%; 
+  height: 95%; 
+  
+  
+}
+
+.left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Adjust as needed */
+}
+
+.product-scan {
+  flex: 3; 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 8px;
+}
+
+.product-name {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  background-color: rgb(219, 219, 219);
+  border-radius: 10px;
+}
+
+.name{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 32px;
+}
+
+.barcode {
+  padding: 10px;
+  font-size: 25px;
+  background-color: rgb(240, 240, 240);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.product-numbers {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 25px; 
+  font-size: 18px;
+  padding: 10px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.qty-btn {
+  background-color: #bdd3ce;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.qty-btn:hover {
+  background-color: #e74c3c;
+}
+
+.delete {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.delete:hover {
+  background-color: #c0392b;
+}
+
+.product-table {
+  flex: 7; 
+  display: flex;
+  justify-content: center; 
+  height: 100%;
+  padding: 10px;
+}
+
+table {
+  width: 100%; 
+  height: 100%;
+  border: 2px solid #013c5a9e;
+  border-radius: 20px;
+  padding: 20px;
+  color: #013d5a;
+  table-layout: fixed;
+}
+
+tr td {
+  border-bottom: 2px solid #013d5a;
+  width: 90%;
+  padding: 10px 15px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+tr {
+  flex: 0 0 50px; 
+  display: flex;
+  width: 100%;
+}
+
+.table-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #013c5aaa;
+}
+
+.right {
+  flex: 1;
+  background-color: lightcoral; 
+  border-bottom-right-radius: 10px;
+}
+
