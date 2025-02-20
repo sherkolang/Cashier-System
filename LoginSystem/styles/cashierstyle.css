@@ -28,7 +28,7 @@ body {
 
 .header {
   height: 40px;
-  background-color: #bdd3ce ;
+  background-color: #708c69 ;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   color: #013d5a;
@@ -49,45 +49,40 @@ body {
   flex: 2;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Adjust as needed */
+  height: 100%;
 }
 
 .product-scan {
-  flex: 3; 
+  flex: 2.5; 
   display: flex;
   flex-direction: column;
   gap: 15px;
   padding: 8px;
 }
 
-.product-name {
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  background-color: rgb(219, 219, 219);
-  border-radius: 10px;
-}
-
-.name{
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  font-size: 32px;
-}
-
-.barcode {
-  padding: 10px;
-  font-size: 25px;
+.barcode { 
+  padding: 10px 0;
+  position: relative;
+  
   background-color: rgb(240, 240, 240);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; 
+}
+
+.barcode input { 
+  width: 98%; 
+  font-size: 30px;
+  padding: 8px;
+  border: 2.5px solid #9b9b9b;
+  background-color: #ffffff; 
+  border-radius: 20px; 
 }
 
 .product-numbers {
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  gap: 25px; 
   font-size: 18px;
   padding: 10px;
 }
@@ -96,6 +91,13 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+  color: #013c5a7e;
+  font-size: 15px;
+  font-weight: bold;
+}
+#quantity-value {
+  padding: 10px;
+  color: #013d5a;
 }
 
 .qty-btn {
@@ -116,18 +118,27 @@ body {
   background-color: #e74c3c;
   color: white;
   border: none;
+  font-weight: bold;
   padding: 5px 10px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
   border-radius: 5px;
+  letter-spacing: 1px;
 }
 
 .delete:hover {
-  background-color: #c0392b;
+  background-color: #bdd3ce;
+}
+
+.product-price {
+  font-size: 25px;
+  font-weight: bold;
+  color: #012c42;
+  padding-right: 20px;
 }
 
 .product-table {
-  flex: 7; 
+  flex: 7.5; 
   display: flex;
   justify-content: center; 
   height: 100%;
@@ -166,8 +177,42 @@ tr {
 }
 
 .right {
+  padding-left: 20px;
   flex: 1;
-  background-color: lightcoral; 
-  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-right: -20px;
 }
 
+.top-right {
+  flex:4.5;
+  width: 90%; 
+  height: 90%; 
+  background-image: url('../imgs/background.png');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #013c5a7e;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.cash { 
+  padding: 10px 0;
+  position: relative;
+}
+
+.cash input { 
+  width: 90%; 
+  font-size: 20px;
+  padding: 8px;
+  border: 2.5px solid #013c5a7e;
+  background-color: #ffffff; 
+  border-radius: 10px; 
+}
+
+.top-center {
+  flex: 5.5;
+  padding: 10px;
+}

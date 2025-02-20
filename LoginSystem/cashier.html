@@ -18,22 +18,20 @@
       <div class="left">
         <div class="product-scan">
           <div class="product-name">
-            <div class="name">
-              La Leche
-            </div>
             <div class="barcode">
-              01250917
+              <input type="text" name="barcode" id="barcode" placeholder="Barcode">
             </div>
           </div>
 
           <div class="product-numbers">
             <div class="quantity">
+                Quantity: 
                 <button class="qty-btn" onclick="decreaseQuantity()">-</button>
                 <span id="quantity-value">1</span>
                 <button class="qty-btn" onclick="increaseQuantity()">+</button>
             </div>
             <button class="delete">Delete</button>
-            <div class="price">$4.50</div>
+            <div class="product-price">$4.50</div>
         </div>
         
         </div>
@@ -55,7 +53,30 @@
         </div>
       </div>
       
-      <div class="right">right</div>
+      <div class="right">
+        <div class="top-right"></div>
+        <div class="top-center">
+          <div class="total-price">
+            <div class="cash">
+            <input type="text" name="cash" id="cash" placeholder="Cash">
+          </div>
+          <div class="total">
+              Total
+            </div>
+            <div class="price">
+              $9.00
+            </div>
+          </div>
+          <div class="change">
+            <div class="total-change">
+              Change
+            </div>
+            <div class="customer-change">
+              $9.00
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
